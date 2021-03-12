@@ -1,0 +1,22 @@
+.header {
+  padding: 10px;
+  display: flex;
+}
+
+.header section {
+  width: 50%;
+}
+
+.header img {
+  height: 50px;
+}
+
+.hamburger_menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hamburger_menu img {
+  height: 36px;
+  padding-top: 6px;
+}
