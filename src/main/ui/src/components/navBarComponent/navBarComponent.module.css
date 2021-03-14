@@ -7,7 +7,7 @@
   width: 50%;
 }
 
-.header img {
+.header svg {
   height: 50px;
 }
 
@@ -16,7 +16,19 @@
   justify-content: flex-end;
 }
 
-.hamburger_menu img {
+.hamburger_menu svg {
   height: 36px;
   padding-top: 6px;
+}
+
+svg {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }

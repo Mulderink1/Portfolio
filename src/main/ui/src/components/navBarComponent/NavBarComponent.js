@@ -1,16 +1,17 @@
 import React from 'react';
-import Logo from '../../MMLogo.svg';
 import styles from './navBarComponent.module.css';
-import HamburgerMenu from '../../HamburgerMenu.svg';
+import desktopStyles from './navBarComponent_desktop.module.css';
+import LogoSvgComponent from '../logoSvgComponent/LogoSvgComponent.js';
+import HamburgerMenuSvgComponent from '../hamburgerMenuSvgComponent/HamburgerMenuSvgComponent.js';
 
 const NavBarComponent = () => {
   return (
-    <header className={styles.header}>
+    <header className={window.innerWidth < 600 ? styles.header : `${styles.header} ${desktopStyles.header}`}>
       <section>
-        <img src={Logo}/>
+        <LogoSvgComponent/>
       </section>
       <section className={styles.hamburger_menu}>
-        <img src={HamburgerMenu}/>
+        <HamburgerMenuSvgComponent/>
       </section>
       <nav></nav>
     </header>
@@ -18,3 +19,4 @@ const NavBarComponent = () => {
 }
 
 export default NavBarComponent
+
