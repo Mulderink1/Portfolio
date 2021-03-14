@@ -1,9 +1,10 @@
-import React from 'react';
 import styles from './logoSvgComponent.module.css';
+import CONSTANTS from '../../CONSTANTS.js';
+import navBarComponentDesktopAnimationStyles from './navBarComponent_desktop_hover_animation.module.css';
 
-const LogoSvgComponent = () => {
+const LogoSvgComponent = props => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg"
+    <svg className={props.parentComponent === CONSTANTS.NavBarComponent ? `${navBarComponentDesktopAnimationStyles.header_logo_desktop_animation}` : null} xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 200 200" >
       <g id="Layer_1">
         <g>
@@ -22,7 +23,7 @@ const LogoSvgComponent = () => {
               l20.24-33.95h15.32v1.78c-7.41,0.7-8.27,1.31-8.13,6.44l0.36,26.05c0.26,7.04,0.62,7.4,8.08,8.09v1.78H151.55z"/>
           </g>
         </g>
-        <polygon className={styles.st1} points="190,145 100,190 10,145 10,55 100,10 190,55 	" />
+        <polygon className={styles.st1 + ' ' + navBarComponentDesktopAnimationStyles.st1} points="190,145 100,190 10,145 10,55 100,10 190,55 	" />
       </g>
     </svg>
   )

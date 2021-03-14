@@ -1,20 +1,20 @@
-import React from 'react';
 import styles from './navBarComponent.module.css';
-import desktopStyles from './navBarComponent_desktop.module.css';
+import CONSTANTS from '../../CONSTANTS.js';
 import LogoSvgComponent from '../logoSvgComponent/LogoSvgComponent.js';
 import HamburgerMenuSvgComponent from '../hamburgerMenuSvgComponent/HamburgerMenuSvgComponent.js';
 
 const NavBarComponent = () => {
   return (
-    <header className={window.innerWidth < 600 ? styles.header : `${styles.header} ${desktopStyles.header}`}>
-      <section>
-        <LogoSvgComponent/>
-      </section>
-      <section className={styles.hamburger_menu}>
-        <HamburgerMenuSvgComponent/>
-      </section>
-      <nav></nav>
-    </header>
+    <nav className={styles.nav_bar}>
+      <ul>
+        <li>
+          <LogoSvgComponent parentComponent={window.innerWidth >= 600 ? CONSTANTS.NavBarComponent : null}/>
+        </li>
+        <li>
+          <HamburgerMenuSvgComponent/>
+        </li>
+      </ul>
+    </nav>
   )
 }
 
