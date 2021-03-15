@@ -11,7 +11,7 @@ const NavBarComponent = () => {
 
   return (
     <section className={style.nav_bar}>
-      <section>
+      <section className={style.logo_section}>
         <LogoSvgComponent parentComponent={window.innerWidth >= 600 ? CONSTANTS.NavBarComponent : null} />
       </section>
       <section className={style.hamburger_menu_svg_section}>
@@ -27,8 +27,8 @@ const NavBarComponent = () => {
       </section>
       {
         window.innerWidth < 600 ?
-          <section className={`${style.mobile_nav_menu_section} ${displayMobileNavMenu === false ? style.hide_mobile_nav_menu : style.display_mobile_nav_menu}`} >
-            <MobileNavMenuComponent />
+          <section className={`${style.mobile_nav_menu_section} ${displayMobileNavMenu === false ? style.hide_mobile_blur : style.display_mobile_blur}`} >
+            <MobileNavMenuComponent displayMobileNavMenu={displayMobileNavMenu}/>
           </section>
           :
           null

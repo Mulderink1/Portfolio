@@ -1,9 +1,9 @@
 import style from './mobileNavMenuComponent.module.css';
 import TextATagComponent from '../textATagComponent/TextATagComponent';
 
-const MobileNavMenuComponent = () => {
+const MobileNavMenuComponent = props => {
   return (
-    <nav className={style.mobile_nav_menu_nav_component}>
+    <nav className={`${style.mobile_nav_menu_nav_component} ${props.displayMobileNavMenu === false ? style.hide_mobile_nav_menu : style.display_mobile_nav_menu}`}>
       <ul>
         <li>
           <TextATagComponent text={'Mike'}/>

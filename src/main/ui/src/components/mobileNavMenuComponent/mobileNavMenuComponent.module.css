@@ -1,7 +1,11 @@
 .mobile_nav_menu_nav_component {
-  background-color: rgba(75, 74, 74, 0.8);
-  width: 55%;
-  padding: 10px;
+  position: fixed;
+  background-color: rgb(17, 34, 64, .9);
+  z-index: 12;
+  top: 0;
+  width: 75%;
+  right: -75%;
+  height: 100%;
 }
 
 .mobile_nav_menu_nav_component ul {
@@ -17,4 +21,16 @@
   text-align: center;
   display: flex;
   justify-content: center;
+}
+
+.display_mobile_nav_menu {
+  transform: translateX(-100%);
+  transition-timing-function: ease-in;
+  transition: 2s;
+}
+
+.hide_mobile_nav_menu {
+  transform: translateX(100%);
+  transition-timing-function: ease-out;
+  transition: 2s;
 }
