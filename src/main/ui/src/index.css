@@ -136,3 +136,7 @@ body {
   background-color: #101322;
   padding: 10px;
 }
+
+p, h1, h2, h3, h4, h5 {
+  color: #89d0c2
+}

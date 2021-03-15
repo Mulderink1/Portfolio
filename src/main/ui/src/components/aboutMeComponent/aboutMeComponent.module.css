@@ -1,0 +1,36 @@
+.about_me_component {
+  margin: 100px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name_title_section {
+  display: flex;
+  flex-direction: column;
+}
+
+.about_me_component, h2, h3, p {
+  padding: 5px;
+}
+
+.about_me_component p {
+  font-size: 16px;
+  color: #838eaa;
+  font-weight: 100;
+  margin: 15px 5px;
+}
+
+.name_title_section h2 {
+  font-size: 45px;
+  color: #ccd6f6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.name_title_section h3 {
+  color: #8893af;
+  text-align: right;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}

@@ -2,27 +2,50 @@
   margin: 10px;
 }
 
-.nav_bar ul{
+.nav_bar {
   display: flex;
 }
 
-.nav_bar li {
+.nav_bar section {
   width: 50%;
 }
 
 .nav_bar svg {
   height: 50px;
-  padding: 2px;
 }
 
-.nav_bar li:last-child {
+.hamburger_menu_svg_section {
   display: flex;
   justify-content: flex-end;
 }
 
-.nav_bar li:last-child svg {
+.hamburger_menu_svg_section svg {
   height: 36px;
-  padding-top: 8px;
+  padding-top: 7px;
+  z-index: 20;
+}
+
+.mobile_nav_menu_section {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  width: 100% !important;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.display_mobile_nav_menu {
+  transform: translateX(-100%);
+  transition-timing-function: ease-in;
+  transition: 2s;
+}
+
+.hide_mobile_nav_menu {
+  transform: translateX(100%);
+  transition-timing-function: ease-out;
+  transition: 2s;
 }
 
 .nav_bar svg {

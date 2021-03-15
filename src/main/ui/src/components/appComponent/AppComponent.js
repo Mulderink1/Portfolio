@@ -5,14 +5,12 @@ import NavBarComponent from '../../components/navBarComponent/NavBarComponent.js
 
 const App = () => {
   return (
-    <div>
-      <div className={styles.loading_spinner}>
+    <div className={styles.app_component}>
+      <section className={styles.loading_spinner}>
         <LogoSvgComponent/>
-      </div>
+      </section>
       <NavBarComponent />
-      <body>
-        <AboutMeComponent />
-      </body>
+      <AboutMeComponent />
     </div>
   );
 }

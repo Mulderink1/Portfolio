@@ -1,8 +1,13 @@
 import styles from './hamburgerMenuSvgComponent.module.css';
 
-const HamburgerMenuSvgComponent = () => {
+const HamburgerMenuSvgComponent = props => {
+
+  const displayMobileNavMenu = () => {
+    props.displayMobileNavMenu === false ? props.setDisplayMobileNavMenu(true) : props.setDisplayMobileNavMenu(false)
+  }
+
   return (
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" >
+    <svg onClick={window.innerWidth < 600 ? displayMobileNavMenu : null} version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" >
       <g id="Layer_1">
         <g>
           <g>
@@ -20,7 +25,7 @@ const HamburgerMenuSvgComponent = () => {
               l20.24-33.95h15.32v1.78c-7.41,0.7-8.27,1.31-8.13,6.44l0.36,26.05c0.26,7.04,0.62,7.4,8.08,8.09v1.78H-63.45z"/>
           </g>
         </g>
-        <polygon class="st1" points="-25,145 -115,190 -205,145 -205,55 -115,10 -25,55 	"/>
+        <polygon className="st1" points="-25,145 -115,190 -205,145 -205,55 -115,10 -25,55 	"/>
       </g>
       <g id="Layer_2">
             <path className={styles.st1} d="M177,80H23c-1.66,0-3-1.34-3-3v-9c0-1.66,1.34-3,3-3h154c1.66,0,3,1.34,3,3v9C180,78.66,178.66,80,177,80z"/>
