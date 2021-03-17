@@ -9,31 +9,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
-  -moz-animation: cssAnimation 1s ease-in 5s forwards;
-  /* Firefox */
-  -webkit-animation: cssAnimation 1s ease-in 5s forwards;
-  /* Safari and Chrome */
-  -o-animation: cssAnimation 1s ease-in 5s forwards;
-  /* Opera */
-  animation: cssAnimation 0s ease-in 5s forwards;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-@keyframes cssAnimation {
-  to {
-      width:0;
-      height:0;
-      overflow:hidden;
-  }
-}
-@-webkit-keyframes cssAnimation {
-  to {
-      width:0;
-      height:0;
-      visibility:hidden;
-  }
-}
 
 .loading_spinner svg {
   height: 100px;
@@ -41,11 +18,14 @@
   stroke-dashoffset: 1000;
   animation: dash 5s linear forwards;
 }
-
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
   }
 }
 
-
+.section_blocks :first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

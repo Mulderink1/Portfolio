@@ -2,9 +2,9 @@ import styles from './logoSvgComponent.module.css';
 import CONSTANTS from '../../CONSTANTS.js';
 import navBarComponentDesktopAnimationStyles from './navBarComponent_desktop_hover_animation.module.css';
 
-const LogoSvgComponent = props => {
+const LogoSvgComponent = ({ navId, parentComponent }) => {
   return (
-    <svg className={props.parentComponent === CONSTANTS.NavBarComponent ? `${navBarComponentDesktopAnimationStyles.header_logo_desktop_animation}` : null} xmlns="http://www.w3.org/2000/svg"
+    <svg className={parentComponent === CONSTANTS.NavBarComponent ? `${navBarComponentDesktopAnimationStyles.header_logo_desktop_animation}` : null} xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 200 200" >
       <g id="Layer_1">
         <g>

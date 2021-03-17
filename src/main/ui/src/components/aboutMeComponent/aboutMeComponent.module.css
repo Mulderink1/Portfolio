@@ -1,8 +1,8 @@
 .about_me_component {
-  margin: 100px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 100px, 0;
 }
 
 .name_title_section {

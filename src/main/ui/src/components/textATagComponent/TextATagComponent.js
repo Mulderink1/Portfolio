@@ -1,8 +1,8 @@
 import style from './textATagComponent.module.css';
 
-const TextATagComponent = props => {
+const TextATagComponent = ({ hrefOnClickFunction, href, text }) => {
   return (
-    <a className={style.a_tag}>{props.text}</a>
+    <a href={href} onClick={hrefOnClickFunction} className={style.a_tag}>{text}</a>
   )
 }
 
