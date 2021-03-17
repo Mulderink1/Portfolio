@@ -11,7 +11,6 @@
   justify-content: center;
 }
 
-
 .loading_spinner svg {
   height: 100px;
   stroke-dasharray: 1000;
@@ -28,4 +27,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.show_body_block_section {
+  opacity: 1 !important;
+  animation-name: fadeInOpacity !important;
+  animation-iteration-count: 1 !important;
+  animation-timing-function: ease-in !important;
+  animation-duration: 1s !important;
+}
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

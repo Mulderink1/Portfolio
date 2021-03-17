@@ -136,26 +136,11 @@ body {
   background-color: #101322;
 }
 
-p, h1, h2, h3, h4, h5 {
-  color: #89d0c2
-}
-
-.hide_body_block_section{
-  opacity: 0
-}
-
-.show_body_block_section{
-  opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 1s;
-}
-@keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #89d0c2;
 }

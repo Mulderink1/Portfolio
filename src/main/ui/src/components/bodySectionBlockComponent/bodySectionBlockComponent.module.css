@@ -1,3 +1,7 @@
-.block_section{
+.block_section {
   height: 100vh;
+}
+
+.hide_body_block_section {
+  opacity: 0;
 }
